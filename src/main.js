@@ -1,8 +1,14 @@
-import Vue from 'vue'
-import App from './App.vue'
+import Vue from "vue";
+import App from "./App.vue";
+import vuetify from "./plugins/vuetify";
+import Tacklebox from "@narrative.io/tackle-box";
+import "@narrative.io/tackle-box/dist/tackle-box.css";
 
-Vue.config.productionTip = false
+Vue.use(Tacklebox);
+
+Vue.config.productionTip = false;
 
 new Vue({
-  render: h => h(App),
-}).$mount('#app')
+  vuetify,
+  render: (h) => h(App)
+}).$mount("#app");
